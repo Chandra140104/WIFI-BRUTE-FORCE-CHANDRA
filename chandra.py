@@ -113,9 +113,9 @@ def try_multiple_passwords(ssid, passwords):
     total_passwords = len(passwords)
     for index, password in enumerate(passwords, start=1):
         percentage = (index / total_passwords) * 100
-        print(f"🔗 Menghubungkan ke {ssid}... [{percentage:.1f}%]")
+        print(f" Menghubungkan ke {ssid}... [{percentage:.1f}%]")
         if connect_to_wifi(ssid, password):
-            print(f"🔗 Menghubungkan ke {ssid}... [100.0%]")  
+            print(f" Menghubungkan ke {ssid}... [100.0%]")  
             print(f"Berhasil terhubung ke SSID: {ssid}")
             print(f"Password: {password}")
             return True
@@ -129,7 +129,7 @@ def wifi_menu():
     Menu utama untuk memindai dan mencoba menghubungkan ke jaringan WiFi.
     """
     while True:
-        display_available_wifi()  # Scan WiFi otomatis saat masuk menu ini
+        display_available_wifi()  # Scan WiFi otomatis saat masuk menu ini.
         
         print("\n------------------------------")
         print("      MENU SCAN WIFI     ")
